@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="r10 box_shadow" style="position:relative;width:812px;">
+        <div id="divStockList" style="overflow-x:auto;overflow-y:hidden;border:0;">
+           <table id="tblStockList" class="r10 b1 p4_2" style="width:100%;font-size:10pt;line-height:16px;">
+              <tbody>
+                 <tr class="bg_h2" style="font-weight:bold;height:38px;text-align:center;vertical-align:middle;">
+                    <th style="max-width: 1px; width: 1px;">
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E4%BB%A3%E8%99%9F&amp;SORT=DOWN');">代號</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th style="max-width: 1px; width: 1px;">
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E5%90%8D%E7%A8%B1&amp;SORT=DOWN');">名稱</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E8%82%A1%E5%83%B9%3Cbr%3E%E6%97%A5%E6%9C%9F&amp;SORT=DOWN');">股價<br>日期</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E6%88%90%E4%BA%A4&amp;SORT=DOWN');">成交</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=PER&amp;SORT=DOWN');">PER</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr>1個月<br>走勢圖</nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr>3個月<br>走勢圖</nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr>6個月<br>走勢圖</nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr>1年<br>走勢圖</nobr>
+                          </div>
+                       </div>
+                    </th>
+                 </tr>
+                 <tr id="row0" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow0','row0'],'#fff2cc');" onmouseout="ChgBGColor(['hrow0','row0'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2454)聯發科 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2454">2454</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2454)聯發科 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2454" target="_blank">聯發科</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:green;font-weight:bold">
+                       <nobr><a class="link_green" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=2454&amp;PRICE_ADJ=F" title="查看 (2454) 聯發科 日線圖">1350</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>23.4</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2454)聯發科 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2454&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2454_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2454)聯發科 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2454&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2454_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2454)聯發科 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2454&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2454_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2454)聯發科 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2454&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2454_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row1" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow1','row1'],'#fff2cc');" onmouseout="ChgBGColor(['hrow1','row1'],'#f0f0f0');" style="background: rgb(240, 240, 240);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2379)瑞昱 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2379">2379</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2379)瑞昱 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2379" target="_blank">瑞昱</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=2379&amp;PRICE_ADJ=F" title="查看 (2379) 瑞昱 日線圖">554</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>27.1</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2379)瑞昱 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2379&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2379_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2379)瑞昱 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2379&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2379_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2379)瑞昱 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2379&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2379_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2379)瑞昱 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2379&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2379_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row2" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow2','row2'],'#fff2cc');" onmouseout="ChgBGColor(['hrow2','row2'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (6285)啟碁 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=6285">6285</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (6285)啟碁 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=6285" target="_blank">啟碁</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:green;font-weight:bold">
+                       <nobr><a class="link_green" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=6285&amp;PRICE_ADJ=F" title="查看 (6285) 啟碁 日線圖">147.5</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>17.6</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (6285)啟碁 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=6285&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_6285_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (6285)啟碁 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=6285&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_6285_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (6285)啟碁 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=6285&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_6285_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (6285)啟碁 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=6285&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_6285_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row3" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow3','row3'],'#fff2cc');" onmouseout="ChgBGColor(['hrow3','row3'],'#f0f0f0');" style="background: rgb(240, 240, 240);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (5388)中磊 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=5388">5388</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (5388)中磊 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=5388" target="_blank">中磊</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=5388&amp;PRICE_ADJ=F" title="查看 (5388) 中磊 日線圖">119</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>13.4</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (5388)中磊 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=5388&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_5388_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (5388)中磊 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=5388&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_5388_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (5388)中磊 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=5388&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_5388_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (5388)中磊 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=5388&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_5388_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row4" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow4','row4'],'#fff2cc');" onmouseout="ChgBGColor(['hrow4','row4'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (3558)神準 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=3558">3558</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (3558)神準 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=3558" target="_blank">神準</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=3558&amp;PRICE_ADJ=F" title="查看 (3558) 神準 日線圖">186</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>14.5</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3558)神準 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3558&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3558_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3558)神準 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3558&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3558_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3558)神準 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3558&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3558_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3558)神準 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3558&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3558_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row5" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow5','row5'],'#fff2cc');" onmouseout="ChgBGColor(['hrow5','row5'],'#f0f0f0');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (3694)海華 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=3694">3694</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (3694)海華 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=3694" target="_blank">海華</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=3694&amp;PRICE_ADJ=F" title="查看 (3694) 海華 日線圖">52.2</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>22.1</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3694)海華 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3694&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3694_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3694)海華 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3694&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3694_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3694)海華 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3694&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3694_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3694)海華 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3694&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3694_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row6" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow6','row6'],'#fff2cc');" onmouseout="ChgBGColor(['hrow6','row6'],'#ffffff');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (4968)立積 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=4968">4968</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (4968)立積 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=4968" target="_blank">立積</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=4968&amp;PRICE_ADJ=F" title="查看 (4968) 立積 日線圖">243</a></nobr>
+                    </td>
+                    <td></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (4968)立積 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=4968&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_4968_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (4968)立積 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=4968&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_4968_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (4968)立積 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=4968&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_4968_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (4968)立積 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=4968&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_4968_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row7" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow7','row7'],'#fff2cc');" onmouseout="ChgBGColor(['hrow7','row7'],'#f0f0f0');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2455)全新 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2455">2455</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2455)全新 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2455" target="_blank">全新</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=2455&amp;PRICE_ADJ=F" title="查看 (2455) 全新 日線圖">188</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>55.3</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2455)全新 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2455&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2455_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2455)全新 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2455&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2455_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2455)全新 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2455&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2455_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2455)全新 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2455&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2455_365.gif?45481.4659837963"></a></td>
+                 </tr>
+              </tbody>
+           </table>
+           <table id="FloatHead" class="r10_0_0_10 b1 p4_2" style="display:none;width:1px;font-size:10pt;line-height:16px;position:absolute;top:0;left:0;">
+              <tbody>
+                 <tr class="bg_h2" style="font-weight:bold;height:38px;text-align:center;vertical-align:middle;">
+                    <th style="max-width: 1px; width: 1px;">
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E4%BB%A3%E8%99%9F&amp;SORT=DOWN');">代號</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th style="max-width: 1px; width: 1px;">
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E5%90%8D%E7%A8%B1&amp;SORT=DOWN');">名稱</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                 </tr>
+                 <tr id="hrow0" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow0','row0'],'#fff2cc');" onmouseout="ChgBGColor(['hrow0','row0'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2454)聯發科 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2454">2454</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2454)聯發科 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2454" target="_blank">聯發科</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow1" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow1','row1'],'#fff2cc');" onmouseout="ChgBGColor(['hrow1','row1'],'#f0f0f0');" style="background: rgb(240, 240, 240);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2379)瑞昱 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2379">2379</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2379)瑞昱 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2379" target="_blank">瑞昱</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow2" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow2','row2'],'#fff2cc');" onmouseout="ChgBGColor(['hrow2','row2'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (6285)啟碁 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=6285">6285</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (6285)啟碁 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=6285" target="_blank">啟碁</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow3" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow3','row3'],'#fff2cc');" onmouseout="ChgBGColor(['hrow3','row3'],'#f0f0f0');" style="background: rgb(240, 240, 240);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (5388)中磊 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=5388">5388</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (5388)中磊 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=5388" target="_blank">中磊</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow4" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow4','row4'],'#fff2cc');" onmouseout="ChgBGColor(['hrow4','row4'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (3558)神準 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=3558">3558</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (3558)神準 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=3558" target="_blank">神準</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow5" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow5','row5'],'#fff2cc');" onmouseout="ChgBGColor(['hrow5','row5'],'#f0f0f0');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (3694)海華 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=3694">3694</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (3694)海華 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=3694" target="_blank">海華</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow6" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow6','row6'],'#fff2cc');" onmouseout="ChgBGColor(['hrow6','row6'],'#ffffff');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (4968)立積 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=4968">4968</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (4968)立積 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=4968" target="_blank">立積</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow7" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow7','row7'],'#fff2cc');" onmouseout="ChgBGColor(['hrow7','row7'],'#f0f0f0');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2455)全新 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2455">2455</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2455)全新 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2455" target="_blank">全新</a></nobr>
+                    </td>
+                 </tr>
+              </tbody>
+           </table>
+        </div>
+     </div>
+
+
+     <div class="r10 box_shadow" style="position:relative;width:812px;">
+        <div id="divStockList" style="overflow-x:auto;overflow-y:hidden;border:0;">
+           <table id="tblStockList" class="r10 b1 p4_2" style="width:100%;font-size:10pt;line-height:16px;">
+              <tbody>
+                 <tr class="bg_h2" style="font-weight:bold;height:38px;text-align:center;vertical-align:middle;">
+                    <th style="max-width: 1px; width: 1px;">
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E4%BB%A3%E8%99%9F&amp;SORT=DOWN');">代號</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th style="max-width: 1px; width: 1px;">
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E5%90%8D%E7%A8%B1&amp;SORT=DOWN');">名稱</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E8%82%A1%E5%83%B9%3Cbr%3E%E6%97%A5%E6%9C%9F&amp;SORT=DOWN');">股價<br>日期</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E6%88%90%E4%BA%A4&amp;SORT=DOWN');">成交</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=PER&amp;SORT=DOWN');">PER</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr>1個月<br>走勢圖</nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr>3個月<br>走勢圖</nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr>6個月<br>走勢圖</nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr>1年<br>走勢圖</nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th>
+                        <div style="height:38px;">
+                           <div style="position:relative;top:50%;transform:translateY(-50%);">
+                              個股報告
+                           </div>
+                        </div>
+                     </th>                     
+                 </tr>
+                 <tr id="row0" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow0','row0'],'#fff2cc');" onmouseout="ChgBGColor(['hrow0','row0'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2454)聯發科 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2454">2454</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2454)聯發科 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2454" target="_blank">聯發科</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:green;font-weight:bold">
+                       <nobr><a class="link_green" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=2454&amp;PRICE_ADJ=F" title="查看 (2454) 聯發科 日線圖">1350</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>23.4</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2454)聯發科 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2454&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2454_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2454)聯發科 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2454&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2454_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2454)聯發科 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2454&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2454_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2454)聯發科 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2454&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2454_365.gif?45481.4659837963"></a></td>
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2454)聯發科 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2454">2454</a></nobr>
+                    </td>
+					
+                </tr>
+                 <tr id="row1" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow1','row1'],'#fff2cc');" onmouseout="ChgBGColor(['hrow1','row1'],'#f0f0f0');" style="background: rgb(240, 240, 240);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2379)瑞昱 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2379">2379</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2379)瑞昱 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2379" target="_blank">瑞昱</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=2379&amp;PRICE_ADJ=F" title="查看 (2379) 瑞昱 日線圖">554</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>27.1</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2379)瑞昱 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2379&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2379_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2379)瑞昱 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2379&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2379_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2379)瑞昱 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2379&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2379_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2379)瑞昱 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2379&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2379_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row2" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow2','row2'],'#fff2cc');" onmouseout="ChgBGColor(['hrow2','row2'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (6285)啟碁 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=6285">6285</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (6285)啟碁 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=6285" target="_blank">啟碁</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:green;font-weight:bold">
+                       <nobr><a class="link_green" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=6285&amp;PRICE_ADJ=F" title="查看 (6285) 啟碁 日線圖">147.5</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>17.6</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (6285)啟碁 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=6285&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_6285_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (6285)啟碁 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=6285&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_6285_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (6285)啟碁 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=6285&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_6285_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (6285)啟碁 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=6285&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_6285_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row3" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow3','row3'],'#fff2cc');" onmouseout="ChgBGColor(['hrow3','row3'],'#f0f0f0');" style="background: rgb(240, 240, 240);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (5388)中磊 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=5388">5388</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (5388)中磊 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=5388" target="_blank">中磊</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=5388&amp;PRICE_ADJ=F" title="查看 (5388) 中磊 日線圖">119</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>13.4</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (5388)中磊 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=5388&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_5388_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (5388)中磊 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=5388&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_5388_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (5388)中磊 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=5388&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_5388_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (5388)中磊 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=5388&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_5388_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row4" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow4','row4'],'#fff2cc');" onmouseout="ChgBGColor(['hrow4','row4'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (3558)神準 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=3558">3558</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (3558)神準 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=3558" target="_blank">神準</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=3558&amp;PRICE_ADJ=F" title="查看 (3558) 神準 日線圖">186</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>14.5</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3558)神準 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3558&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3558_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3558)神準 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3558&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3558_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3558)神準 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3558&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3558_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3558)神準 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3558&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3558_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row5" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow5','row5'],'#fff2cc');" onmouseout="ChgBGColor(['hrow5','row5'],'#f0f0f0');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (3694)海華 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=3694">3694</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (3694)海華 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=3694" target="_blank">海華</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=3694&amp;PRICE_ADJ=F" title="查看 (3694) 海華 日線圖">52.2</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>22.1</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3694)海華 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3694&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3694_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3694)海華 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3694&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3694_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3694)海華 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3694&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3694_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (3694)海華 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=3694&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_3694_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row6" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow6','row6'],'#fff2cc');" onmouseout="ChgBGColor(['hrow6','row6'],'#ffffff');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (4968)立積 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=4968">4968</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (4968)立積 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=4968" target="_blank">立積</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=4968&amp;PRICE_ADJ=F" title="查看 (4968) 立積 日線圖">243</a></nobr>
+                    </td>
+                    <td></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (4968)立積 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=4968&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_4968_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (4968)立積 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=4968&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_4968_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (4968)立積 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=4968&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_4968_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (4968)立積 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=4968&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_4968_365.gif?45481.4659837963"></a></td>
+                 </tr>
+                 <tr id="row7" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow7','row7'],'#fff2cc');" onmouseout="ChgBGColor(['hrow7','row7'],'#f0f0f0');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2455)全新 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2455">2455</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2455)全新 個股詳細資料" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2455" target="_blank">全新</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>07/05</nobr>
+                    </td>
+                    <td style=";color:red;font-weight:bold">
+                       <nobr><a class="link_red" target="_blank" href="/tw/ShowK_Chart.asp?STOCK_ID=2455&amp;PRICE_ADJ=F" title="查看 (2455) 全新 日線圖">188</a></nobr>
+                    </td>
+                    <td>
+                       <nobr>55.3</nobr>
+                    </td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2455)全新 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2455&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2455_30.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2455)全新 日線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2455&amp;CHT_CAT=DATE" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2455_90.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2455)全新 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2455&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2455_180.gif?45481.4659837963"></a></td>
+                    <td style="padding:1px;"><a class="link_black" title="查看 (2455)全新 週線圖" href="/tw/ShowK_Chart.asp?STOCK_ID=2455&amp;CHT_CAT=WEEK" target="_blank"><img style="width:64px;height:20px;" border="0" src="image/StockPriceSS/PRICE_SS_2455_365.gif?45481.4659837963"></a></td>
+                 </tr>
+              </tbody>
+           </table>
+           <table id="FloatHead" class="r10_0_0_10 b1 p4_2" style="display:none;width:1px;font-size:10pt;line-height:16px;position:absolute;top:0;left:0;">
+              <tbody>
+                 <tr class="bg_h2" style="font-weight:bold;height:38px;text-align:center;vertical-align:middle;">
+                    <th style="max-width: 1px; width: 1px;">
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E4%BB%A3%E8%99%9F&amp;SORT=DOWN');">代號</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                    <th style="max-width: 1px; width: 1px;">
+                       <div style="height:38px;">
+                          <div style="position:relative;top:50%;transform:translateY(-50%);">
+                             <nobr><a class="link_black" style="cursor:pointer;" onclick="ReloadStockList('SEARCH_WORD=&amp;SHEET=%E8%87%AA%E8%A8%82%E6%AC%84%E4%BD%8D%5Ftest&amp;SHEET2=&amp;RPT_TIME=%E6%9C%80%E6%96%B0%E8%B3%87%E6%96%99&amp;MARKET_CAT=%E6%88%91%E7%9A%84%E9%81%B8%E8%82%A1&amp;INDUSTRY_CAT=Wifi7&amp;STOCK_CODE=&amp;STEP=DATA&amp;SORT_FIELD=%E5%90%8D%E7%A8%B1&amp;SORT=DOWN');">名稱</a></nobr>
+                          </div>
+                       </div>
+                    </th>
+                 </tr>
+                 <tr id="hrow0" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow0','row0'],'#fff2cc');" onmouseout="ChgBGColor(['hrow0','row0'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2454)聯發科 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2454">2454</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2454)聯發科 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2454" target="_blank">聯發科</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow1" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow1','row1'],'#fff2cc');" onmouseout="ChgBGColor(['hrow1','row1'],'#f0f0f0');" style="background: rgb(240, 240, 240);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2379)瑞昱 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2379">2379</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2379)瑞昱 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2379" target="_blank">瑞昱</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow2" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow2','row2'],'#fff2cc');" onmouseout="ChgBGColor(['hrow2','row2'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (6285)啟碁 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=6285">6285</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (6285)啟碁 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=6285" target="_blank">啟碁</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow3" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow3','row3'],'#fff2cc');" onmouseout="ChgBGColor(['hrow3','row3'],'#f0f0f0');" style="background: rgb(240, 240, 240);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (5388)中磊 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=5388">5388</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (5388)中磊 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=5388" target="_blank">中磊</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow4" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow4','row4'],'#fff2cc');" onmouseout="ChgBGColor(['hrow4','row4'],'#ffffff');" style="background: rgb(255, 255, 255);">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (3558)神準 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=3558">3558</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (3558)神準 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=3558" target="_blank">神準</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow5" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow5','row5'],'#fff2cc');" onmouseout="ChgBGColor(['hrow5','row5'],'#f0f0f0');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (3694)海華 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=3694">3694</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (3694)海華 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=3694" target="_blank">海華</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow6" bgcolor="#ffffff" align="center" valign="middle" onmouseover="ChgBGColor(['hrow6','row6'],'#fff2cc');" onmouseout="ChgBGColor(['hrow6','row6'],'#ffffff');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (4968)立積 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=4968">4968</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (4968)立積 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=4968" target="_blank">立積</a></nobr>
+                    </td>
+                 </tr>
+                 <tr id="hrow7" bgcolor="#f0f0f0" align="center" valign="middle" onmouseover="ChgBGColor(['hrow7','row7'],'#fff2cc');" onmouseout="ChgBGColor(['hrow7','row7'],'#f0f0f0');">
+                    <td style="mso-number-format:\@;">
+                       <nobr><a title="查看 (2455)全新 個股詳細資料" class="link_black" target="_blank" href="/tw/StockDetail.asp?STOCK_ID=2455">2455</a></nobr>
+                    </td>
+                    <td>
+                       <nobr><a title="查看 (2455)全新 個股詳細資料" 個股詳細資料'="" class="link_black" href="/tw/StockDetail.asp?STOCK_ID=2455" target="_blank">全新</a></nobr>
+                    </td>
+                 </tr>
+              </tbody>
+           </table>
+        </div>
+     </div>
+     
+</body>
+</html>

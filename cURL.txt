@@ -1,0 +1,17 @@
+curl "https://www.capitalim.com.tw/cmsapi/newcms/api/IAArticle/Search?&Page=1&Take=7" \
+  -H "Accept: application/json, text/plain, */*" \
+  -H "Accept-Language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkZyb250V2ViIiwibmJmIjoxNzIwMTUxMjgyLCJleHAiOjE3MjAyMzc2ODIsImlhdCI6MTcyMDE1MTI4Mn0.mZWvsc7Xn-jSTDzXVmuhl_NxR9txbDaQxgPAiQo_AGc" \
+  -H "Connection: keep-alive" \
+  -H "Content-Type: application/json" \
+  -H "Cookie: _ga=GA1.1.636061187.1720150588; ASP.NET_SessionId=gugly420wugwvodqfpjzf0oz; TS01713f4a=01bdf565924d7925ba59de4b4ebddaa40e928bbbdbcc93fca18b533e92a89b052b393afd00ae2f03fdc8c0ae6fd7a99de56b4bf11a; _ga_HL4YRJH76V=GS1.1.1720150588.1.1.1720151282.28.0.0; TSaf2f34c4027=08763a8acdab2000464f0bdac101052840dacb1623cceca1d5d68b00d9fbd7348cb6f3cc469d57a30837177e59113000625f60a1170f8d347d959ed96e92c5d497fb8dbe539d89af00cb433abb5342565a269b763f1eacc12c4beb0d9e73c121" \
+  -H "Origin: https://www.capitalim.com.tw" \
+  -H "Referer: https://www.capitalim.com.tw/newsite/research-report/shares;page=1" \
+  -H "Sec-Fetch-Dest: empty" \
+  -H "Sec-Fetch-Mode: cors" \
+  -H "Sec-Fetch-Site: same-origin" \
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" \
+  -H "sec-ch-ua: \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"" \
+  -H "sec-ch-ua-mobile: ?0" \
+  -H "sec-ch-ua-platform: \"Windows\"" \
+  --data-raw "{\"category\":\"shares\",\"stockSymbol\":\"\",\"keyword\":\"2330\",\"startDate\":null,\"endDate\":null,\"researcherName\":\"\",\"score\":\"\",\"industry\":\"\"}"
