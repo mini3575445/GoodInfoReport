@@ -8,10 +8,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
-from bs4 import BeautifulSoup
 import time
 import jwt
 import datetime
+import pdb
 _dicStock = {}  #字典放class Stock
 def Get_stock_field_values(stock_dict, field_name) -> list: 
     """
@@ -33,7 +33,7 @@ class Stock:
         self.stockName = stockName #string
         self.statementdogURL = None #string,財報狗
         self.twseURL = None #string,年報
-        self.capitalimURL = None #string,群益
+        self.capitalimURL = None #string,群益   
         self.capitalimDate = None #int
         
     def Add_stock_statementdogInfo(self, statementdogURL):
@@ -287,7 +287,7 @@ def UpdateHTML_tblStockList_Addfield():
 
 ###Selenium台股資訊網的自訂選股
 #使用者
-user_data_dir = r'C:\Users\Jake\AppData\Local\Google\Chrome\User Data Test'
+user_data_dir = r'C:\Users\mini3\AppData\Local\Google\Chrome\User Data'
 profile_path = 'Default'  # 使用預設資料夾，也可以指定其他資料夾
 
 # 配置 Chrome 選項
@@ -298,7 +298,7 @@ service = Service(ChromeDriverManager().install())
 # 啟動 ChromeDriver
 driver = webdriver.Chrome(service=service, options=options)
 
-driver.get("https://goodinfo.tw/tw/StockList.asp")
+driver.get("https://goodinfo.tw/tw/StockList.asp?MARKET_CAT=我的選股&INDUSTRY_CAT=Test&SHEET=自訂欄位_test")
 time.sleep(10)
 UpdateHTML_tblStockList_Addfield()
 try:
